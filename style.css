@@ -1,0 +1,24 @@
+:root { font: 16px/1.55 system-ui, sans-serif; color: #172335; background: #eff3f7; }
+* { box-sizing: border-box; }
+main { width: min(960px, 92vw); margin: 2rem auto; }
+header, section { background: #fff; border: 1px solid #d7e0ea; border-radius: 16px; padding: clamp(1rem, 4vw, 2rem); margin-bottom: 1rem; }
+h1, h2 { margin: 0 0 .5rem; letter-spacing: -.03em; }
+h1 { font-size: clamp(1.5rem, 5vw, 2.6rem); }
+h2 { font-size: 1.2rem; }
+p { margin: .5rem 0 1rem; }
+.actions { display: flex; flex-wrap: wrap; gap: .7rem; }
+button, .button { font: inherit; background: #e7efff; color: #183d75; border: 1px solid #b8cced; border-radius: .55rem; padding: .45rem .8rem; cursor: pointer; }
+.button { position: relative; overflow: hidden; background: #194983; color: #fff; }
+.button:focus-within, :focus-visible { outline: 2px solid #1e6ad0; outline-offset: 3px; }
+.button input { position: absolute; inset: 0; opacity: 0; width: 100%; cursor: inherit; }
+button:disabled { opacity: .5; cursor: default; }
+.graph { position: relative; overflow: auto; background: #f6f9fc; border-radius: 12px; }
+.graph:empty { display: none; }
+.graph-inner { position: relative; }
+.edge { position: absolute; height: 2px; background: #8ba4c5; transform-origin: left; pointer-events: none; }
+.node { position: absolute; transform: translate(-50%, -50%); white-space: nowrap; max-width: 120px; overflow: hidden; text-overflow: ellipsis; font-size: .78rem; background: #fff; }
+.node[aria-pressed="true"] { background: #194983; color: white; }
+.details { overflow-wrap: anywhere; white-space: pre-line; }
+.issue { border-top: 1px solid #d7e0ea; padding: 1rem 0; }
+.issue p { overflow-wrap: anywhere; }
+.issue button { text-align: left; overflow-wrap: anywhere; }

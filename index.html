@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Obsidian 链接检查器</title>
+<link rel="stylesheet" href="style.css">
+<script type="module" src="app.mjs"></script>
+</head>
+<body>
+<main>
+<header>
+<h1>Obsidian 链接检查器</h1>
+<p>在浏览器中检查 Markdown 双链，审阅修复后下载笔记副本。</p>
+<div class="actions">
+<label class="button">选择笔记文件夹<input id="files" type="file" webkitdirectory multiple></label>
+<button id="demo">加载示例</button>
+</div>
+<p id="status" role="status">请选择文件夹，或加载示例。</p>
+</header>
+<section aria-labelledby="graph-title">
+<h2 id="graph-title">笔记关系</h2>
+<div id="graph" class="graph"></div>
+<p id="details" class="details">选择一个节点查看链接与反向链接。</p>
+</section>
+<section aria-labelledby="issues-title">
+<h2 id="issues-title">待检查链接</h2>
+<div id="issues"></div>
+</section>
+</main>
+</body>
+</html>
